@@ -6,7 +6,7 @@
 /*   By: yutsasak <yutsasak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 20:19:30 by yutsasak          #+#    #+#             */
-/*   Updated: 2024/04/24 22:30:08 by yutsasak         ###   ########.fr       */
+/*   Updated: 2024/04/24 23:04:33 by yutsasak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int i;
-	int neg;
-	int res;
+	int	i;
+	int	neg;
+	int	res;
 
 	i = 0;
 	neg = 1;

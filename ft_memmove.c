@@ -6,7 +6,7 @@
 /*   By: yutsasak <yutsasak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 21:31:20 by yutsasak          #+#    #+#             */
-/*   Updated: 2024/04/24 15:23:36 by yutsasak         ###   ########.fr       */
+/*   Updated: 2024/04/24 23:03:29 by yutsasak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memmove(void *s1, const void *s2, size_t n)
 	size_t	len;
 
 	len = 0;
-	if (s1 == NULL &&  s2 == NULL)
+	if (s1 == NULL && s2 == NULL)
 		return (NULL);
 	if (s2 < s1)
 	{

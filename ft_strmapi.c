@@ -6,7 +6,7 @@
 /*   By: yutsasak <yutsasak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 21:46:56 by yutsasak          #+#    #+#             */
-/*   Updated: 2024/04/24 22:06:13 by yutsasak         ###   ########.fr       */
+/*   Updated: 2024/04/24 23:05:24 by yutsasak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char *res;
-	int i;
+	char	*res;
+	int		i;
 
 	i = 0;
 	if (!s || !f)

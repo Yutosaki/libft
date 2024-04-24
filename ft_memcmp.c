@@ -6,13 +6,13 @@
 /*   By: yutsasak <yutsasak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 22:00:01 by yutsasak          #+#    #+#             */
-/*   Updated: 2024/04/19 17:12:32 by yutsasak         ###   ########.fr       */
+/*   Updated: 2024/04/24 23:05:00 by yutsasak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_memcmp(const void *s1,const void *s2,size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	char	*str1;
 	char	*str2;
