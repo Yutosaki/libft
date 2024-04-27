@@ -6,7 +6,7 @@
 /*   By: yutsasak <yutsasak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 20:19:30 by yutsasak          #+#    #+#             */
-/*   Updated: 2024/04/24 23:04:33 by yutsasak         ###   ########.fr       */
+/*   Updated: 2024/04/27 15:43:12 by yutsasak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,27 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	neg;
-	int	res;
+	long long	res;
+	int			sign;
 
-	i = 0;
-	neg = 1;
 	res = 0;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	sign = 1;
+	while (*str == ' ' || ('\x09' <= *str && *str <= '\x0D'))
+		str++;
+	if (*str == '+' || *str == '-')
+		if (*str++ == '-')
+			sign = -1;
+	while (ft_isdigit(*str))
 	{
-		if (str[i] == '-')
-			neg *= -1;
-		i++;
+		if ((res * 10 + (*str - '0')) / 10 != res)
+		{
+			if (sign == 1)
+				return (-1);
+			if (sign == -1)
+				return (0);
+		}
+		res = res * 10 + (*str - '0');
+		str++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		res = (str[i] - '0') + (res * 10);
-		i++;
-	}
-	return (res * neg);
+	return ((int)(res * sign));
 }
