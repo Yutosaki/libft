@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: yutsasak <yutsasak@student.42tokyo.jp>     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/05/04 15:32:37 by yutsasak          #+#    #+#              #
+#    Updated: 2024/05/04 15:32:40 by yutsasak         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 
 SRCS =	ft_isascii.c ft_isalnum.c ft_isalpha.c ft_isdigit.c ft_isprint.c\
@@ -21,10 +33,15 @@ BONUS =		ft_lstnew.c \
 
 OBJS = $(SRCS:.c=.o)
 BOBJS = $(BONUS:.c=.o)
+INCLUDES =  -I libft.h
 
 CC = cc
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror $(INCLUDES)
+
+ifdef WITH_BONUS
+	OBJS += $(BOBJS)
+endif
 
 all: $(NAME)
 
@@ -33,9 +50,9 @@ $(NAME): $(OBJS)
 	
 %.o:%.c
 	${CC} ${CFLAGS} -c $< -o $@
-
-bonus: $(OBJS) $(BOBJS)
-	ar -rc $(NAME) $(BOBJS)
+	
+bonus:
+	@$(MAKE) WITH_BONUS=TRUE
 
 clean:
 	rm -f $(OBJS) $(BOBJS)
