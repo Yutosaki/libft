@@ -6,7 +6,7 @@
 /*   By: yutsasak <yutsasak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 20:19:30 by yutsasak          #+#    #+#             */
-/*   Updated: 2024/04/27 15:43:12 by yutsasak         ###   ########.fr       */
+/*   Updated: 2024/05/06 13:32:56 by yutsasak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_atoi(const char *str)
 
 	res = 0;
 	sign = 1;
-	while (*str == ' ' || ('\x09' <= *str && *str <= '\x0D'))
+	while (*str == ' ' || (9 <= *str && *str <= 13))
 		str++;
 	if (*str == '+' || *str == '-')
 		if (*str++ == '-')

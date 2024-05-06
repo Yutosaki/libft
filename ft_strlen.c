@@ -6,7 +6,7 @@
 /*   By: yutsasak <yutsasak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 18:33:56 by yutsasak          #+#    #+#             */
-/*   Updated: 2024/04/17 18:38:52 by yutsasak         ###   ########.fr       */
+/*   Updated: 2024/05/06 13:44:28 by yutsasak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])
-	{
 		i++;
-	}
 	return (i);
 }
