@@ -6,7 +6,7 @@
 #    By: yutsasak <yutsasak@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/04 15:32:37 by yutsasak          #+#    #+#              #
-#    Updated: 2024/05/06 13:41:14 by yutsasak         ###   ########.fr        #
+#    Updated: 2024/05/07 18:09:42 by yutsasak         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,8 +19,8 @@ SRCS =	ft_isascii.c ft_isalnum.c ft_isalpha.c ft_isdigit.c ft_isprint.c\
 		ft_atoi.c ft_calloc.c ft_strdup.c ft_strtrim.c ft_split.c\
 		ft_itoa.c ft_strmapi.c\
 		ft_substr.c ft_strjoin.c ft_striteri.c ft_putchar_fd.c ft_putendl_fd.c\
-		ft_putnbr_fd.c ft_putstr_fd.c\
-		
+		ft_putnbr_fd.c ft_putstr_fd.c
+
 BONUS =		ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
@@ -33,11 +33,10 @@ BONUS =		ft_lstnew.c \
 
 OBJS = $(SRCS:.c=.o)
 BOBJS = $(BONUS:.c=.o)
-INCLUDES =  -I libft.h
 
 CC = cc
 
-CFLAGS = -Wall -Wextra -Werror $(INCLUDES)
+CFLAGS = -Wall -Wextra -Werror
 
 ifdef WITH_BONUS
 	OBJS += $(BOBJS)
