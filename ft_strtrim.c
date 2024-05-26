@@ -6,7 +6,7 @@
 /*   By: yutsasak <yutsasak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 18:34:52 by yutsasak          #+#    #+#             */
-/*   Updated: 2024/04/24 23:07:00 by yutsasak         ###   ########.fr       */
+/*   Updated: 2024/05/25 20:27:08 by yutsasak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	calc_res_size(char *s1, char *set, char **head, char **tail)
 {
 	char	*trav_set;
-	char	len;
+	size_t	len;
 
 	trav_set = set;
 	len = ft_strlen(s1);
